@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Nombre (Layout + EditText) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nombreLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:hint="@string/nombre"
+            app:boxStrokeColor="@color/material_dynamic_primary0"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nombreEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Apellidos (Layout + EditText) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/apellidoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:hint="@string/apellidos"
+            app:boxStrokeColor="@color/material_dynamic_primary0"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/apellidosEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Portal (Layout + EditText) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/portalLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:hint="@string/portal"
+            app:boxStrokeColor="@color/material_dynamic_primary0"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/portalEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Piso (Layout + EditText) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pisoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:hint="@string/piso"
+            app:boxStrokeColor="@color/material_dynamic_primary0"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pisoEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Teléfono (Layout + EditText) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/telefonoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:hint="@string/telefono"
+            app:boxStrokeColor="@color/material_dynamic_primary0"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/telefonoEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Email (Layout + EditText) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:hint="@string/email"
+            app:boxStrokeColor="@color/material_dynamic_primary0"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Contraseña (Layout + EditText) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/contrasenaLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:hint="@string/contrase_a"
+            app:endIconMode="password_toggle"
+            app:boxStrokeColor="@color/material_dynamic_primary0"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/contrasenaEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnRegistrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/registrar"
+            android:layout_marginTop="10dp"
+            />
+
+
+    </LinearLayout>
+
+</ScrollView>

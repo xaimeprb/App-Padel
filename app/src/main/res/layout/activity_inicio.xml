@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:context=".InicioActivity">
+
+        <TextView
+            android:id="@+id/textHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/inicioPadel"
+            android:layout_marginTop="25dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <CalendarView
+            android:id="@+id/calendar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/textHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/disponibilidad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/disponibilidad"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/calendar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <View
+            android:id="@+id/divisorDisponibilidad"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintTop_toBottomOf="@+id/disponibilidad"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_reservas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="7dp"
+            tools:itemCount="12"
+            android:nestedScrollingEnabled="false"
+            tools:listitem="@layout/item_reservas"
+            app:layout_constraintTop_toBottomOf="@id/divisorDisponibilidad"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
