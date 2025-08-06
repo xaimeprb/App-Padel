@@ -1,15 +1,14 @@
-package com.example.app1;
+package com.example.app1.ui.auth;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.app1.R;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -71,7 +70,7 @@ public class Register_Activity extends AppCompatActivity {
 
             // Enviar a la otra Activity
 
-            Intent intent = new Intent(Register_Activity.this, MainActivity.class);
+            Intent intent = new Intent(Register_Activity.this, LoginActivity.class);
 
             intent.putExtra("email", email);
             intent.putExtra("contrasena", contrasena);

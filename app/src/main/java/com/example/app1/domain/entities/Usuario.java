@@ -1,5 +1,8 @@
 package com.example.app1.domain.entities;
 
+/**
+ * Entidad que representa un usuario dentro de la comunidad.
+ */
 public class Usuario {
 
     private String nombre;

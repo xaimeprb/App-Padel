@@ -1,4 +1,4 @@
-package com.example.app1;
+package com.example.app1.ui.home;
 
 import android.os.Bundle;
 
@@ -10,23 +10,34 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.app1.R;
 import com.example.app1.domain.entities.Reserva;
+import com.example.app1.ui.base.BaseActivity;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
-public class InicioActivity extends AppCompatActivity {
+public class InicioActivity extends BaseActivity {
 
     private RecyclerView rv_reservas;
+
+
+    @Override
+    protected int getLayoutResourceId() {
+        return R.layout.activity_inicio;
+    }
+
+    @Override
+    protected int getNavigationMenuItemId() {
+        return R.id.nav_home;
+    }
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_inicio);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -37,7 +48,6 @@ public class InicioActivity extends AppCompatActivity {
 
         rv_reservas = findViewById(R.id.rv_reservas);
         rv_reservas.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-
         ReservasAdapter adaptador = new ReservasAdapter();
         rv_reservas.setAdapter(adaptador);
 
@@ -46,8 +56,7 @@ public class InicioActivity extends AppCompatActivity {
     }
 
     /**
-     * Se hace una comparación de Arrays para saber cuales son las Reservas hechas en cada día
-     * @return un ArrayList de reservas actualizadas, es decir, sabiendo si el usuario puede Reservar o Cancelar sus reservas
+     * Genera reservas de prueba para la fecha seleccionada
      */
     public ArrayList<Reserva> generateReservas() {
 

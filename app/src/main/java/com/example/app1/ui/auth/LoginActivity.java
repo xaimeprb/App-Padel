@@ -1,4 +1,4 @@
-package com.example.app1;
+package com.example.app1.ui.auth;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,17 +6,15 @@ import android.os.Bundle;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.text.InputType;
-import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.example.app1.ui.home.InicioActivity;
+import com.example.app1.R;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     private TextInputLayout emailLayout, passwordLayout;
     private TextInputEditText emailInput, passwordInput;
@@ -35,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         botonReservas = findViewById(R.id.botonReservas);
 
         registerButton.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, Register_Activity.class);
+            Intent intent = new Intent(LoginActivity.this, Register_Activity.class);
 
             startActivity(intent);
 
@@ -47,11 +45,11 @@ public class MainActivity extends AppCompatActivity {
 
             if (email.isEmpty() || password.isEmpty()) {
 
-                Toast.makeText(MainActivity.this, "Rellena todos los campos", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "Rellena todos los campos", Toast.LENGTH_SHORT).show();
 
             } else {
 
-                Toast.makeText(MainActivity.this, "Inicio de sesión correcto", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "Inicio de sesión correcto", Toast.LENGTH_SHORT).show();
 
             }
 
@@ -59,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
         botonReservas.setOnClickListener(v -> {
 
-            Intent intent = new Intent(MainActivity.this, InicioActivity.class);
+            Intent intent = new Intent(LoginActivity.this, InicioActivity.class);
             startActivity(intent);
 
         });

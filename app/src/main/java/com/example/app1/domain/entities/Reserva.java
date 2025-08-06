@@ -2,13 +2,15 @@ package com.example.app1.domain.entities;
 
 import java.time.LocalDateTime;
 
+/**
+ * Entidad que representa una reserva dentro de la comunidad.
+ */
 public class Reserva {
     private int id;
     private LocalDateTime fecha;
     private String horario;
     private int estado;
     private int id_usuario;
-
 
     public Reserva(int id, LocalDateTime fecha, String horario, int estado, int id_usuario) {
         this.id = id;
@@ -17,7 +19,6 @@ public class Reserva {
         this.estado = estado;
         this.id_usuario = id_usuario;
     }
-
 
     public int getId() {
         return id;

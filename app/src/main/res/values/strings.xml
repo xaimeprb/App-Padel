@@ -25,4 +25,12 @@
     <string name="inicioPadel">Pista de Pádel</string>
     <string name="disponibilidad">Disponibilidad</string>
     <string name="horariosDisponiblesScroll">Lista de horarios disponibles</string>
+    <string name="menu_home">Inicio</string>
+    <string name="menu_comunicados">Comunicados</string>
+    <string name="menu_profile">Perfil</string>
+    <string name="cerrar_sesi_n">Cerrar sesión</string>
+    <string name="notificaciones_por_email">Notificaciones por Email</string>
+    <string name="notificaciones_push">Notificaciones Push</string>
+    <string name="configuraci_n">Configuración</string>
+
 </resources>

@@ -1,4 +1,4 @@
-package com.example.app1;
+package com.example.app1.ui.home;
 
 import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.app1.R;
 import com.example.app1.domain.entities.Reserva;
 
 import java.util.ArrayList;
