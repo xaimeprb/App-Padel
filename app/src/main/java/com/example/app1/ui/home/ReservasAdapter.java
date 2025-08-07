@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.app1.R;
-import com.example.app1.domain.entities.Reserva;
+import com.example.app1.domain.model.Reserva;
 
 import java.util.ArrayList;
 

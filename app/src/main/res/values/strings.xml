@@ -32,5 +32,14 @@
     <string name="notificaciones_por_email">Notificaciones por Email</string>
     <string name="notificaciones_push">Notificaciones Push</string>
     <string name="configuraci_n">Configuración</string>
-
+    <string name="no_comunicados">No hay comunicados disponibles</string>
+    <string name="no_reservas">"No tiene reservas "</string>
+    <string name="error_cargando_reservas">Error cargando reservas</string>
+    <string name="error_cargando_comunicados">Error cargando comunicados</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="login_not_registered">¿No estás registrado? Crea una cuenta</string>
+    <string name="password">Contraseña</string>
+    <string name="fill_all_fields">Rellena todos los campos</string>
+    <string name="login_prompt"><![CDATA[¿No estás registrado? Crea una <u>cuenta</u>]]></string>
+    <string name="login_prompt_html"><![CDATA[¿No estás registrado? Crea una <u>cuenta</u>]]></string>
 </resources>

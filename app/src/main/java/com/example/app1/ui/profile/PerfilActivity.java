@@ -17,7 +17,6 @@ public class PerfilActivity extends BaseActivity {
 
     private TextView tvNombre, tvEmail;
     private Switch swNotificaciones;
-    private Button btnLogout;
 
     @Override
     protected int getLayoutResourceId() {
@@ -40,7 +39,9 @@ public class PerfilActivity extends BaseActivity {
         tvNombre = findViewById(R.id.tvNombre);
         tvEmail = findViewById(R.id.tvEmail);
         swNotificaciones = findViewById(R.id.swNotificaciones);
-        btnLogout = findViewById(R.id.btnLogout);
+        Button btnLogout = findViewById(R.id.btnLogout);
+
+        // TODO: Recoger de FireBase los datos del usuario
 
         tvNombre.setText("Juan Pérez");
         tvEmail.setText("juan.perez@urbanizacion.com");

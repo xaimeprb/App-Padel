@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "460820176495",
+    "project_id": "pistapadelapp",
+    "storage_bucket": "pistapadelapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460820176495:android:3ed16847e74a0c0140379a",
+        "android_client_info": {
+          "package_name": "com.example.prueba_inicio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBO0KP1oszABzqDfBlceeu9i024UnooFuU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460820176495:android:96db0019940f5dc240379a",
+        "android_client_info": {
+          "package_name": "com.paquete.PadelSanMiguel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBO0KP1oszABzqDfBlceeu9i024UnooFuU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

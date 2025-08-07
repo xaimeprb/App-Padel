@@ -2,9 +2,9 @@ package com.example.app1.session;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import com.example.app1.domain.entities.Usuario;
-import com.example.app1.domain.entities.Reserva;
-import com.example.app1.domain.entities.Comunicado;
+import com.example.app1.domain.model.Usuario;
+import com.example.app1.domain.model.Reserva;
+import com.example.app1.domain.model.Comunicado;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,7 +48,9 @@ public class SessionManager {
     public static synchronized SessionManager getInstance(Context ctx) {
 
         if (instance == null) {
+
             instance = new SessionManager(ctx);
+
         }
 
         return instance;
@@ -61,12 +63,12 @@ public class SessionManager {
     private void loadFromPrefs() {
 
         // Cargo usuario
-
         String nombre   = prefs.getString(KEY_NOMBRE, "Juan");
         String apellido = prefs.getString(KEY_APELLIDO, "Pérez");
         String portal   = prefs.getString(KEY_PORTAL, "A");
         String piso     = prefs.getString(KEY_PISO, "2");
         String email    = prefs.getString(KEY_EMAIL, "juan.perez@urbanizacion.com");
+
         usuario = new Usuario();
         usuario.setNombre(nombre);
         usuario.setApellido(apellido);
@@ -78,6 +80,7 @@ public class SessionManager {
 
         pushNotificationsEnabled  = prefs.getBoolean(KEY_PUSH, true);
         emailNotificationsEnabled = prefs.getBoolean(KEY_EMAIL_NOTIF, true);
+
     }
 
     /**
@@ -122,8 +125,10 @@ public class SessionManager {
     }
 
     public void setPushEnabled(boolean enabled) {
+
         this.pushNotificationsEnabled = enabled;
         saveSettings();
+
     }
 
     public boolean isEmailEnabled() {
@@ -131,8 +136,10 @@ public class SessionManager {
     }
 
     public void setEmailEnabled(boolean enabled) {
+
         this.emailNotificationsEnabled = enabled;
         saveSettings();
+
     }
 
     // Mock data accessors

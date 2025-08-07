@@ -1,5 +1,6 @@
 package com.example.app1.ui.comunicados;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,14 +8,20 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.app1.R;
-import com.example.app1.domain.entities.Comunicado;
+import com.example.app1.domain.model.Comunicado;
 import java.util.ArrayList;
+import java.util.List;
 
+/**
+ * Adaptador para el RecyclerView de comunicados.
+ */
 public class ComunicadosAdapter extends RecyclerView.Adapter<ComunicadosAdapter.VH> {
     private ArrayList<Comunicado> data = new ArrayList<>();
 
-    public void setData(ArrayList<Comunicado> items) {
-        this.data = items;
+    @SuppressLint("NotifyDataSetChanged")
+    public void setData(List<Comunicado> items) {
+        this.data.clear();
+        this.data.addAll(items);
         notifyDataSetChanged();
     }
 
@@ -38,11 +45,15 @@ public class ComunicadosAdapter extends RecyclerView.Adapter<ComunicadosAdapter.
         return data.size();
     }
 
+    /**
+     * ViewHolder personalizado para el RecyclerView.
+     */
     static class VH extends RecyclerView.ViewHolder {
         TextView titulo, descripcion;
+
         VH(@NonNull View v) {
             super(v);
-            titulo = v.findViewById(R.id.tvTitulo);
+            titulo      = v.findViewById(R.id.tvTitulo);
             descripcion = v.findViewById(R.id.tvDescripcion);
         }
     }
